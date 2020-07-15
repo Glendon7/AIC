@@ -1,0 +1,112 @@
+
+body::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: fixed;
+  background-image: url(Img/fire-dance.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+.clue{
+  margin: 0 auto;
+  margin-top: 40px;
+  width:400px;
+  height:100px;
+  background-image: url(Img/cl.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+  transition: transform .2s;
+  
+  
+}
+
+.clue :hover{
+ 
+  transform: scale(1.5);
+}
+
+.cl{
+  width:340px;
+  height: 310px;
+  margin-left: 5%;
+  margin-top: 15%;
+  transition: transform .2s;
+}
+
+.cl :hover{
+ 
+  transform: scale(1.2);
+}
+
+
+#img1,#img2,#img3,#img4,#img5,#img6,#img7 {
+  position: absolute;
+  top: 20%;
+  left: 46%;
+  cursor: move;
+  width:100px;
+  height:500px;
+}
+
+
+#img1{
+  transform: rotate(-1deg);
+  z-index: 2;
+
+}
+
+
+#img2{
+  transform: rotate(21deg);
+  z-index: 1;
+
+}
+
+#img3{
+  transform: rotate(-23deg);
+  z-index: 3;
+}
+
+#img4{
+  transform: rotate(43deg);
+  z-index: 5;
+}
+
+#img5{
+  transform: rotate(-45deg);
+  z-index: 4;
+}
+
+#img6{
+  transform: rotate(66deg);
+}
+
+#img7{
+  transform: rotate(-66deg);
+  z-index: 6;
+}
+/*
+#img1,#img2,#img3,#img4,#img5,#img6,#img7:hover{
+  box-shadow: 0px 0px 10px 1px #fffa65;
+}*/
+  /*
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: none;
+    color: #fff;
+  }
+  */
