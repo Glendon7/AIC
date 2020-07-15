@@ -20,7 +20,7 @@ function dragElement(elmnt) {
   } else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
-
+    elmnt.ontouchmove=dragMouseDown;
     
   }
 
@@ -30,13 +30,22 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
+    document.ontouchend=closeDragElement;
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
+    document.ontouchmove=mobdrag;
     elmnt.style.zIndex="19";
     elmnt.style.transform="rotate(0deg)";
-    //elmnt.style.boxShadow = "0px 0px 10px 1px #fffa65";
+    
 
+  }
+
+  function mobdrag(e){
+    var touchLoc=e.targetTouches[0];
+
+        elmnt.style.left=touchLoc.pageX+"px";
+        elmnt.style.top=touchLoc.pageY+"px";
   }
 
   function elementDrag(e) {
@@ -57,8 +66,22 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
     elmnt.style.zIndex="9";
-    //elmnt.style.boxShadow = "none";
+    document.ontouchend=null;
+    document.ontouchmove=null;
 
   }
 }
+/*
+var elmnt=document.getElementById("img1");
+
+    
+
+    elmnt.addEventListener('touchmove',function(e){
+        var touchLoc=e.targetTouches[0];
+
+        elmnt.style.left=touchLoc.pageX+"px";
+        elmnt.style.top=touchLoc.pageY+"px";
+
+
+   })*/
 });
