@@ -35,7 +35,7 @@ function dragElement(elmnt) {
     document.onmousemove = elementDrag;
     elmnt.style.zIndex="19";
     elmnt.style.transform="rotate(0deg)";
-    elmnt.style.boxShadow = "0px 0px 10px 1px #fffa65";
+    //elmnt.style.boxShadow = "0px 0px 10px 1px #fffa65";
 
   }
 
@@ -57,7 +57,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
     elmnt.style.zIndex="9";
-    elmnt.style.boxShadow = "none";
+    //elmnt.style.boxShadow = "none";
 
   }
 }
