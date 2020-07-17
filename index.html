@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
   <link rel="stylesheet" href="ess.css"/>
-  
-  <script src="main.js"> </script>  
-
+ <!-- <script>
+    if (screen && screen.width > 900) {
+    document.write('<script type="text/javascript" src="main.js"><\/script>');
+    }
+    </script>
+    
+    <script>
+    if (screen && screen.width < 900) {
+    document.write('<script type="text/javascript" src="mobile.js"><\/script>');
+    }
+    </script>
+  -->
+  <script src="main.js" type="text/javascript"></script>
 
 <body>
 
@@ -13,9 +23,16 @@
 </p> 
 </div>
 -->
-<div class="cl">
-<img src="Img/cl.png" class="cl">
-</div> 
+<div class="cl"><img src="Img/cl.png" id="cl" class="cl"></div>
+
+<div class="container" >
+<input type="text" id=check placeholder="Your Answer"  onchange="chk()"></div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
   <img src="Img/img1.jpg" id="img1" >
   <img src="Img/img2.jpg" id="img2" >
   <img src="Img/img3.jpg" id="img3" >
@@ -24,7 +41,7 @@
   <img src="Img/img6.jpg" id="img6" >
   <img src="Img/img7.jpg" id="img7" >
 
-
+ 
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function(event) {
      
 
@@ -38,14 +39,14 @@ function dragElement(elmnt) {
     elmnt.style.zIndex="19";
     elmnt.style.transform="rotate(0deg)";
     
-
   }
 
   function mobdrag(e){
     var touchLoc=e.targetTouches[0];
 
-        elmnt.style.left=touchLoc.pageX+"px";
-        elmnt.style.top=touchLoc.pageY+"px";
+        elmnt.style.left=touchLoc.pageX-50+"px";
+        elmnt.style.top=touchLoc.pageY-250+"px";
+        event.preventDefault();
   }
 
   function elementDrag(e) {
@@ -84,4 +85,34 @@ var elmnt=document.getElementById("img1");
 
 
    })*/
+   var modal = document.getElementById("myModal");
+   
+var img = document.getElementById("cl");
+var modalImg = document.getElementById("img01");
+
+img.onclick = function(){
+  modal.style.display="block";
+  modalImg.src=this.src;
+
+}
+
+var span=document.getElementsByClassName("close")[0];
+
+span.onclick=function(){
+  modal.style.display="none";
+}
 });
+function chk(){
+  
+ ch=document.getElementById("check");
+  //sol=document.q.q1.value.toLowerCase();
+ sol = document.getElementById("check").value.toLowerCase();
+var a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
+if(a==sol)
+{ch.style.background='#0be881';
+console.log("both are equal");
+
+//document.q.q1.style.background = '#0be881';
+//document.q.q1.readOnly=true;
+}
+}

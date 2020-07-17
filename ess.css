@@ -15,34 +15,18 @@ body::before{
 
 .container {
   width: 100%;
-  margin: 3.125rem auto 0 auto;
-}
-
-.clue{
-  margin: 0 auto;
-  margin-top: 40px;
-  width:400px;
-  height:100px;
-  background-image: url(Img/cl.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: contain;
-  transition: transform .2s;
-  
-  
-}
-
-.clue :hover{
- 
-  transform: scale(1.5);
+  margin: 4rem auto 0 5rem;
 }
 
 .cl{
+  display: block;
   width:340px;
   height: 310px;
-  margin-left: 5%;
-  margin-top: 15%;
+  margin-left: 1%;
+  margin-top: 11%;
   transition: transform .2s;
+  cursor: pointer;
+
 }
 
 .cl :hover{
@@ -50,6 +34,74 @@ body::before{
   transform: scale(1.2);
 }
 
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(245, 229, 142);
+  background-color: rgba(243, 179, 106, 0.8);
+
+  
+}
+.modal-content{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom{
+  from{transform: scale(0)}
+  to{transform: scale(1)}
+}
+.close{
+  position: absolute;
+  top:15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 80px;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:700px){
+  .modal-content{
+    width:100%;
+  }
+}
+
+#check{
+ 
+  color:black;
+  padding:11px 13px;
+  background-color: rgba(243, 179, 106, 0.9);
+  text-align: center;
+  font-weight: bold;
+  border: 1.9px solid #99803a;
+    border-radius: 7px;
+    box-shadow: 1px 1px 15px 5px ; 
+
+
+}
+#check:focus{
+  background-color: #ece578;
+  padding: 12px 14px;
+  box-shadow: 1px 1px 15px 5px rgba(243, 179, 106, 0.8); 
+  outline: burlywood;
+}
 
 #img1,#img2,#img3,#img4,#img5,#img6,#img7 {
   position: absolute;
