@@ -22,7 +22,7 @@ function dragElement(elmnt) {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
     elmnt.ontouchmove=dragMouseDown;
-    
+   var a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
   }
 
   function dragMouseDown(e) {
@@ -107,10 +107,10 @@ function chk(){
  ch=document.getElementById("check");
   //sol=document.q.q1.value.toLowerCase();
  sol = document.getElementById("check").value.toLowerCase();
-var a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
+
 if(a==sol)
 {ch.style.background='#0be881';
-console.log("both are equal");
+
 
 //document.q.q1.style.background = '#0be881';
 //document.q.q1.readOnly=true;

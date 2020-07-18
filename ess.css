@@ -80,6 +80,7 @@ body::before{
 @media only screen and (max-width:700px){
   .modal-content{
     width:100%;
+    padding-top: 100px;
   }
 }
 
@@ -102,6 +103,7 @@ body::before{
   box-shadow: 1px 1px 15px 5px rgba(243, 179, 106, 0.8); 
   outline: burlywood;
 }
+
 
 #img1,#img2,#img3,#img4,#img5,#img6,#img7 {
   position: absolute;
@@ -162,3 +164,52 @@ body::before{
     color: #fff;
   }
   */
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape), (orientation:portrait)  {
+
+    
+    .cl{
+      width:560px;
+      height: 510px;
+      margin-left: 21vw;
+      margin-top: 15%;
+    }
+
+    
+#img1,#img2,#img3,#img4,#img5,#img6,#img7 {
+  position: absolute;
+  top: 87vw;
+  left: 67vw;
+  cursor: move;
+  width: 110px;
+  height: 505px;
+}
+
+.modal-content{
+  width:100%;
+  padding-top: 40%;
+}
+
+.container {
+  width: 100%;
+  margin: 98vw auto 0 48vw;
+}
+
+#check{
+  padding: 25px 25px;
+  font-size: 34px;
+  
+}
+#check::placeholder{
+  font-size: 34px;
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+#check:focus::placeholder{
+  font-size: 38px;
+  font-weight: 900;
+  color:rgb(35, 114, 81);
+}
+#check:focus{
+  padding: 28px 28px;
+}
+  }
