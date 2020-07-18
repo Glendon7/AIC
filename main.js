@@ -1,3 +1,4 @@
+var a;
 
 document.addEventListener("DOMContentLoaded", function(event) {
      
@@ -22,9 +23,8 @@ function dragElement(elmnt) {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
     elmnt.ontouchmove=dragMouseDown;
-   var a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
+    
   }
-
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
@@ -38,7 +38,7 @@ function dragElement(elmnt) {
     document.ontouchmove=mobdrag;
     elmnt.style.zIndex="19";
     elmnt.style.transform="rotate(0deg)";
-    
+    a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
   }
 
   function mobdrag(e){
@@ -86,6 +86,7 @@ var elmnt=document.getElementById("img1");
 
    })*/
    var modal = document.getElementById("myModal");
+  
    
 var img = document.getElementById("cl");
 var modalImg = document.getElementById("img01");
@@ -114,5 +115,8 @@ if(a==sol)
 
 //document.q.q1.style.background = '#0be881';
 //document.q.q1.readOnly=true;
+}
+else{
+  ch.style.background="red";
 }
 }
