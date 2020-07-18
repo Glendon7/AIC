@@ -38,15 +38,14 @@ function dragElement(elmnt) {
     document.ontouchmove=mobdrag;
     elmnt.style.zIndex="19";
     elmnt.style.transform="rotate(0deg)";
-    a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
+    
   }
 
   function mobdrag(e){
     var touchLoc=e.targetTouches[0];
-
-        elmnt.style.left=touchLoc.pageX-50+"px";
-        elmnt.style.top=touchLoc.pageY-250+"px";
-        event.preventDefault();
+    elmnt.style.left=touchLoc.pageX-50+"px";
+    elmnt.style.top=touchLoc.pageY-250+"px";
+    event.preventDefault();
   }
 
   function elementDrag(e) {
@@ -104,15 +103,12 @@ span.onclick=function(){
 }
 });
 function chk(){
-  
  ch=document.getElementById("check");
+ a =String.fromCharCode(0x77,0x61,0x74,0x65,0x72);
   //sol=document.q.q1.value.toLowerCase();
  sol = document.getElementById("check").value.toLowerCase();
-
 if(a==sol)
 {ch.style.background='#0be881';
-
-
 //document.q.q1.style.background = '#0be881';
 //document.q.q1.readOnly=true;
 }
