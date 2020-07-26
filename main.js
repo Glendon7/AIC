@@ -109,6 +109,7 @@ function chk(){
  sol = document.getElementById("check").value.toLowerCase();
 if(a==sol)
 {ch.style.background='#0be881';
+window.location.replace("https://saldanhas.github.io/CrimeStory/");
 //document.q.q1.style.background = '#0be881';
 //document.q.q1.readOnly=true;
 }
